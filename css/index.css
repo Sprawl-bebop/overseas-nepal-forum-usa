@@ -545,7 +545,7 @@ a{
     padding: 25px;
 
     background-image: linear-gradient(rgba(114, 114, 117, 0.5), rgba(44, 44, 42, 0.4)),
-                  url("./images/index/mission-vision.jpg");
+                  url("images/index/mission-vision.jpg");
     background-position: center;
     background-size: cover;
     

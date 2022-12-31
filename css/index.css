@@ -78,10 +78,12 @@ a{
     width: 85%;
     margin: 0 auto;
     padding:13px 0px;
+    flex-wrap: wrap;
 }
 
 .container-contact{
     flex: 1;
+    min-width: 350px;
 }
 
 .container-contact li{
@@ -104,7 +106,8 @@ a{
     margin-left: 15px;
     float: left;
 }
-  
+
+
 /* ######################################################################################### */
 
 /* ***************************** Navigation Bar ************************************ */
@@ -138,7 +141,6 @@ a{
 .container-logo div p:last-child{
     font-size: 11px;
     text-transform: uppercase;
-    /* color:  #4f6d7a ; */
     color:#9a8f8f;
 }
 
@@ -411,6 +413,7 @@ a{
     display: inline-block;
     text-transform: uppercase;
     letter-spacing: 3px;
+    line-height: 20px;
     border: 2px solid rgba(231, 231, 30, 0.849);
     border-radius: 10px;
     padding: 18px 20px;
@@ -419,11 +422,12 @@ a{
     transition: .5s all ease-in-out;
 }
 
-#button-small-font{
+.button-small-font{
     font-family: var(--body-font-family);
     font-weight: var(--font-weight-normal);
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
+    line-height: 13px;
 }
 
 .button:hover{
@@ -531,11 +535,6 @@ a{
 
 .container-mvo{
     width: 100%;
-    /* max-height: 400px; */
-    /* background-image: linear-gradient(rgba(167, 167, 173, 0.5), rgba(44, 44, 42, 0.5)),
-                  url("/images/index/mission-vision.jpg");
-    background-position: center;
-    background-size: cover; */
 }
 
 
@@ -544,41 +543,29 @@ a{
     margin: 0 auto;
     padding: 25px;
 
-    background-image: linear-gradient(rgba(114, 114, 117, 0.5), rgba(44, 44, 42, 0.4)),
+    background-image: linear-gradient(rgba(24, 24, 24, 0.6), rgba(16, 16, 16, 0.8)),
                   url("https://raw.githubusercontent.com/Sprawl-bebop/overseas-nepal-forum-usa/main/images/index/mission-vision.jpg");
     background-position: center;
     background-size: cover;
     
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
+    gap: 10px;
 }
 
-.container-mission{
+.container-mvo-inner div{
     flex:1;
-    max-width: 350px;
-    padding: 20px;
+    max-width: 380px;
+    min-width:350px;
+    padding: 15px;
 }
 
-
-.container-vision{
-    flex:1;
-    max-width: 350px;
-    padding: 20px;
-
-} 
-
-.container-obj{
-    flex:1;
-    max-width: 350px;
-    padding: 20px;
-}
 
 .container-mvo-inner div>p:nth-child(1){
     font-family: var(--body-font-family);
     font-weight: var(--font-weight-semibold);
-    font-size: var(--h5-font-size);
+    font-size: var(--h4-font-size);
     line-height: 55px;
     text-transform: uppercase;
     text-align: center;
@@ -589,9 +576,11 @@ a{
 .container-mvo-inner div>p:nth-child(2){
     font-family: var(--body-font-family);
     font-weight: var(--font-weight-normal);
-    font-size: var(--p-font-size);
-    /* text-align: center; */
+    font-size: var(--btn-font-size);
+    line-height: 20px;
+    letter-spacing: 0.5px;
     color: var(--white-color);
+    padding: 12px;
 }
 
 
@@ -620,6 +609,7 @@ a{
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .container-help-inner img{
@@ -628,23 +618,13 @@ a{
 }
 
 .container-help-inner div{
+    max-width: 380px;
+    min-width:350px;
     padding: 25px;
     border-radius: 10px;
     border: 1px solid #BFBFBF;
     box-shadow: 10px 10px 5px #aaaaaa;
-}
 
-.container-donate{
-    flex:1;
-    text-align: center;
-}
-
-.container-volunteer{
-    flex:1;
-    text-align: center;
-}
-
-.container-share{
     flex:1;
     text-align: center;
 }
@@ -668,6 +648,37 @@ a{
 }
 
 
+/* ************************ Get Direction  ************************************** */
+
+.container-map{
+    width: 100%;
+    padding: 5px;
+}
+
+.container-map p{
+    text-align: center;
+    font-family: var(--body-font-family);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--h2-font-size);
+    line-height: 55px;
+    color: #5A6F80;
+    padding: 25px;
+}
+
+.container-map-inner{
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #BFBFBF;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.container-map-inner iframe{
+    width:100%;
+}
+
+
+
 /* ######################################################################################### */
 
 /* ***************************** FOOTER ************************************ */
@@ -680,14 +691,17 @@ a{
     padding: 35px;
     background-color: #5A6F80;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .footer-main > div{
     flex: 1;
     padding: 25px;
+    max-width: 380px;
+    min-width:350px;
 }
 
 .footer-main > div li, a{
@@ -700,28 +714,43 @@ a{
     padding: 6px;
 }
 
+.footer-main a:hover{
+    color: #354149;
+}
+
 .footer-main > div p{
     font-family: var(--body-font-family);
-    font-weight: var(--font-weight-semibold);
-    font-size: var(--h6-font-size);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--h5-font-size);
     line-height: 22px;
 
     color: #354149;
     padding: 6px;
+    margin: 8px;
 }
 
 .footer-img img{
     border-radius: 50%;
 }
 
+.footer-quickLinks div{
+    display: inline-block;
+    margin-right:18px ;
+}
+
+.footer-quickLinks p{
+    text-align: left;
+}
 
 /* ***************************** Footer End ************************************ */
 
 .footer-end{
     width: 100%;
-    height:50px;
+    min-height:50px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 
     background-color: var(--site-footer-bg-color);
 }
@@ -730,6 +759,7 @@ a{
     flex: 1;
     display: flex;
     justify-content: center;
+    min-width: 300px;
     
     font-family: var(--body-font-family);
     font-weight: var(--font-weight-normal);
@@ -742,6 +772,10 @@ a{
     flex: 1;
     display: flex;
     justify-content: center;
+    min-width: 230px;
+    flex-wrap: wrap;
+    min-height: 50px;
+    align-items: center;
 }
 
 .footer-end-icon .social-icon-link{
@@ -756,29 +790,3 @@ a{
 
 /* ############################################################################################### */
 
-/* media query for nav list */
-/* @media only screen and (max-width:1200px) {
-
-
-    .nav-list ul{
-        position: absolute;
-        top:160px;
-        left: 0;
-        background:#e5e5e5;
-        width: 100%;
-    }
-
-
-    .nav-list ul li{
-        width: 100%;
-        margin-top:10px;
-        margin-bottom: 10px;
-    }
-
-    .menuIcon{
-        display: block;
-        cursor: pointer;
-    }
-
-      
-} */
